@@ -6,6 +6,6 @@ try:
 	resultado = 1
 	for i in range(2, numero+1):
 		resultado *= i
-	print(resultado)
+	print("El resultado es: {0}".format(resultado))
 except:
 	print("Valor invalido") 
