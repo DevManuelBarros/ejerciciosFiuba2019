@@ -19,9 +19,23 @@ def calcularPerimetro():
 def calcularArea():
 	base   = int(input("Ingrese la base del rectangulo: "))
 	altura = int(input("Ingrese la altura del rectangulo: "))
-	resultado = base + altura
+	resultado = base * altura
 	print("El area del rectangulo es: {0}".format(resultado))
+
+#Resolución punto c)
+def calcularAreaCoordenadas():
+	x1 = int(input("Ingrese la primer coordenada de X: "))
+	x2 = int(input("Ingrese la segunda coordenada de X: "))
+	y1 = int(input("Ingrese la primer coordenada de Y: "))
+	y2 = int(input("Ingrese la segunda coordenada de Y: "))
+	base = x2 - x1
+	altura = y2 - y1
+	resultado = base * altura
+	print("El area del rectangulo es: {0}".format(resultado))
+
+	
 	
 
 #calcularPerimetro()
-#calcularArea()
+calcularArea()
+#calcularAreaCoordenadas()
