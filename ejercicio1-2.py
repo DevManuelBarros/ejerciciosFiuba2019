@@ -8,6 +8,8 @@
 #	f) Calcular el volumen de una esfera dado su radio.
 #	g) Dados los catetos de un triángulo rectángulo, calcular su hipotenusa.
 
+import math
+
 #Resolución punto a)
 def calcularPerimetroRectangulo():
 	base   = int(input("Ingrese la base del rectangulo: "))
@@ -37,16 +39,63 @@ def calcularAreaCoordenadasRectangulo():
 def calcularPerimetroCirculo():
 	radio = float(input("Ingresar el radio del circulo: "))
 	resultado = float(2*3.14*radio)
-	print("El perimetro del circulo es: {0}.".format(resultado))
+	print("El perimetro del circulo es: {0:0.02f}.".format(resultado))
 
 #Resolución punto e)
 def calcularAreaCirculo():
 	radio = float(input("Ingresar el radio del circulo: "))
 	resultado = float(3.14*radio**2)
-	print("El area del circulo es: {0}.".format(resultado))
+	print("El area del circulo es: {0:0.02f}.".format(resultado))
 
-#calcularPerimetro()
-#calcularArea()
-#calcularAreaCoordenadas()
-#calcularPerimetroCirculo()
-calcularAreaCirculo()
+#Resolución punto f)
+def calcularAreaEsfera():
+	radio = float(input("Ingresar el radio de la esfera: "))
+	resultado = float((4/3)*3.14*radio**3)
+	print("El area de la esfera es: {0:0.02f}.".format(resultado))
+
+#Resolución punto g)
+def calcularHipotenusa():
+	a = int(input("Ingrese el valor del cateto horizontal: "))
+	b = int(input("Ingrese el valor del cateto vertical: "))
+	resultado = math.sqrt(a**2 + b**2)
+	print("La hipotenusa es: {0:0.02f}.".format(resultado))
+	
+continua = True
+while(continua):
+	print("Elija una opción:")
+	print("1. Calcular el perimetro de un rectangulo")
+	print("2. Calcular el area de un rectangulo")
+	print("3. Calcular el area de un rectangulo según sus coordenadas")
+	print("4. Calcular el perimetro de un circulo")
+	print("5. Calcular el area de un circulo")
+	print("6. Calcular el area de una esfera")
+	print("7. Calcular la hipotenusa, según sus catetos")
+	print("8. Salir")
+	print("\n"*2)
+	try:	
+		entrada = int(input("ingrese una opción: "))
+		if (type(entrada) == int):
+			if entrada  == 1:
+				calcularPerimetroRectangulo()
+			elif entrada == 2:
+				calcularAreaRectangulo()
+			elif entrada == 3:
+				calcularAreaCoordenadasRectangulo()
+			elif entrada == 4:
+				calcularPerimetroCirculo()
+			elif entrada == 5:
+				calcularAreaCirculo()
+			elif entrada == 6:
+				calcularAreaEsfera()
+			elif entrada == 7:
+				calcularHipotenusa()
+			elif entrada == 8:
+				continua = False
+				print("Ha decidido Salir!...")
+			else:
+				print("Ha presionado una tecla o un valor no reconocido.")
+				
+	except:
+		print("No se permiten este tipo de ingresos.")
+	print("Presione una tecla para continuar")
+	input()
