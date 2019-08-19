@@ -9,21 +9,21 @@
 #	g) Dados los catetos de un triángulo rectángulo, calcular su hipotenusa.
 
 #Resolución punto a)
-def calcularPerimetro():
+def calcularPerimetroRectangulo():
 	base   = int(input("Ingrese la base del rectangulo: "))
 	altura = int(input("Ingrese la altura del rectangulo: "))
 	resultado = 2 * (base + altura)
 	print("El perimetro del rectangulo es: {0}".format(resultado))
 
 #Resolución punto b)
-def calcularArea():
+def calcularAreaRectangulo():
 	base   = int(input("Ingrese la base del rectangulo: "))
 	altura = int(input("Ingrese la altura del rectangulo: "))
 	resultado = base * altura
 	print("El area del rectangulo es: {0}".format(resultado))
 
 #Resolución punto c)
-def calcularAreaCoordenadas():
+def calcularAreaCoordenadasRectangulo():
 	x1 = int(input("Ingrese la primer coordenada de X: "))
 	x2 = int(input("Ingrese la segunda coordenada de X: "))
 	y1 = int(input("Ingrese la primer coordenada de Y: "))
@@ -33,9 +33,20 @@ def calcularAreaCoordenadas():
 	resultado = base * altura
 	print("El area del rectangulo es: {0}".format(resultado))
 
-	
-	
+#Resolución punto d)
+def calcularPerimetroCirculo():
+	radio = float(input("Ingresar el radio del circulo: "))
+	resultado = float(2*3.14*radio)
+	print("El perimetro del circulo es: {0}.".format(resultado))
+
+#Resolución punto e)
+def calcularAreaCirculo():
+	radio = float(input("Ingresar el radio del circulo: "))
+	resultado = float(3.14*radio**2)
+	print("El area del circulo es: {0}.".format(resultado))
 
 #calcularPerimetro()
-calcularArea()
+#calcularArea()
 #calcularAreaCoordenadas()
+#calcularPerimetroCirculo()
+calcularAreaCirculo()
